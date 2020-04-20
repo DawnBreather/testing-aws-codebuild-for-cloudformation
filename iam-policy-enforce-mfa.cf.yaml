@@ -8,7 +8,7 @@ Parameters:
   AssignedGroups:
     Type: CommaDelimitedList
     Default:
-    - testing-users-group
+    - "testing-users-group"
     Description: List of assigned policies
 Resources:
   MFAPolicy:
