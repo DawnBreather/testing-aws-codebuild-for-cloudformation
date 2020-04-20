@@ -5,11 +5,18 @@ Parameters:
     Type: String
     Default: testing-enforce-mfa
     Description: Preferred name for the policy
+  AssignedGroups:
+    Type: CommaDelimitedList
+    Default:
+    - testing-users-group
+    Description: List of assigned policies
 Resources:
   MFAPolicy:
     Type: AWS::IAM::Policy
     Properties:
       PolicyName: !Ref 'PolicyName'
+      Groups:
+        Ref: AssignedGroups
       PolicyDocument:
         Version: '2012-10-17'
         Statement:

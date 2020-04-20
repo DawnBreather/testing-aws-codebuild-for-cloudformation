@@ -1,19 +1,12 @@
 ---
 AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
-  AssignedPolicies:
-    Type: CommaDelimitedList
-    Default:
-    - testing-enforce-mfa
-    Description: List of assigned policies
   GroupName:
     Type: String
-    Default: testing-group
+    Default: testing-users-group
     Description: Preferred name for the group
 Resources:
   MFAPolicy:
     Type: AWS::IAM::Group
     Properties:
       GroupName: !Ref 'GroupName'
-      Policies:
-       Ref: AssignedPolicies
