@@ -2,7 +2,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   PolicyName:
-    Type: string
+    Type: String
     Default: testing-enforce-mfa
     Description: Preferred name for the policy
 Resources:
